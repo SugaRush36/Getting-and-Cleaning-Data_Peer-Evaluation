@@ -1,0 +1,18 @@
+Start with files: subject_test.txt, x_test.txt, y_test.txt
+                    subject_train.txt, x_train.txt, y_train.txt
+                    features.txt, activity_labels.txt
+
+Load them into R using read.table()
+
+Merge train files together: mrg_train
+Merge test files together:  mrg_test
+Merge into one: finalTable
+
+Set column names
+
+Extract mean and standard deviation
+
+Assign names to the activities using activity_Lables
+
+Create a second tidy data set: tidyDataSetFinal
+and write it into a text file: tidyDataSetFinal.txt
