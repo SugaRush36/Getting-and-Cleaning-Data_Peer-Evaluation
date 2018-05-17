@@ -1,5 +1,3 @@
-## Read all the files into R
-
 setwd("filePath/UCI HAR Dataset/train")
 
 x_train <- read.table("X_train.txt")
@@ -18,13 +16,9 @@ features <- read.table("features.txt")
 
 activity_Labels <- read.table("activity_labels.txt")
 
-## Merge
-
 x_total <- rbind(x_train, x_test)
 y_total <- rbind(y_train, y_test)
 subject_total <- rbind(subject_train, subject_test)
-
-## Set column names
 
 colnames(x_train) <- features[,2] 
 colnames(y_train) <-"activityId"
@@ -35,8 +29,6 @@ colnames(y_test) <- "activityId"
 colnames(subject_test) <- "subjectId"
       
 colnames(activity_Labels) <- c('activityId','activityType')
-
-## Merge everything into one dataset
 
 mrg_train <- cbind(y_train, subject_train, x_train)
 mrg_test <- cbind(y_test, subject_test, x_test)
